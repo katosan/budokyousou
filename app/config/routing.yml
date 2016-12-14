@@ -1,3 +1,13 @@
+budo_api:
+    resource: "@BudoApiBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+api:
+    resource: '.'
+    type:     'api_platform'
+    prefix:   '/api'

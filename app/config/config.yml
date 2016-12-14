@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: "@BudoApiBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -69,3 +70,16 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: BudoApiBundle\Entity\User
+
+api_platform:
+    title: 'Budosport API'
+    description: 'One simple Description'
+    version: '6.6.6'
+    error_formats:
+        jsonproblem:
+            mime_types: ['application/problem+json']
