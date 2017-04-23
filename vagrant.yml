@@ -1,0 +1,11 @@
+vagrant:
+  hostname: 'budokyousou.helios'
+  ip: '192.168.33.11'
+  ame: 'budokyousou'
+  forwards:
+    - ssh: {host: 2201, guest: 22}
+    - http: {host: 8081, guest: 80}
+    - mysql: {host: 3301, guest: 3306}
+  folder:
+    - vagrant-root: {host: '.', guest: '/vagrant'}
+    - application: {host: '..', guest: '/var/www'}

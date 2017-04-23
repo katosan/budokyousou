@@ -1,0 +1,4 @@
+services:
+#    budo_api.example:
+#        class: BudoApiBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
